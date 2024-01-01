@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des films</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+</head>
+
+<body>
+    <div class="films-container">
+        {% for film in films %}
+        <div class="film-card">
+            {% if film.img_url %}
+            <img class="film-image" src="{{ film.img_url }}" alt="Image du film {{ film.titre }}">
+            {% else %}
+            <p class="no-image">Aucune image disponible</p>
+            {% endif %}
+            <div class="film-details">
+                <h2>{{ film.titre }}</h2>
+                <p class="description">{{ film.description }}</p>
+                <p class="rating">Note publique : {{ film.public_rating }}</p>
+                <p class="rating">Note de la presse : {{ film.press_rating }}</p>
+                <div class="horaires">
+                    <img src="../static/images/gaumont_logo.png" alt="Gaumont">
+                    {{ film.horaires_list['gaumont'] }}
+                </div>
+                <div class="horaires">
+                    <img src="../static/images/cgr_logo.png" alt="CGR">
+                    {{ film.horaires_list['cgr'] }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

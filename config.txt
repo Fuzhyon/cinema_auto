@@ -1,0 +1,4 @@
+[cinemas]
+gaumont=your_cinema_gaumont_id
+cgr=your_cinema_cgr_id
+
