@@ -65,8 +65,8 @@ class Film:
 
     def __str__(self):
         return f"Titre: {self._titre}\n" + f"Description: {self._description}\n" \
-               + f"Public rating: {self._public_rating}\n" \
-               + f"Press rating: {self._press_rating}\n" \
+               + f"Note du public: {self._public_rating}\n" \
+               + f"Note de la Presse: {self._press_rating}\n" \
                + f"Prout \n" \
                + f"Horaires: {self._horaires}\n" \
                + f"Img url: {self._img_url}"
